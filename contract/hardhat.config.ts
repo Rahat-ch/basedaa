@@ -11,19 +11,19 @@ const config: HardhatUserConfig = {
     // for mainnet
     'base-mainnet': {
       url: 'https://mainnet.base.org',
-      accounts: [""],
+      accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },
     // for testnet
     'base-goerli': {
       url: 'https://goerli.base.org',
-      accounts: [""],
+      accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },
     // for local dev environment
     'base-local': {
       url: 'http://localhost:8545',
-      accounts: [""],
+      accounts: [process.env.WALLET_KEY as string],
       gasPrice: 1000000000,
     },
   },
